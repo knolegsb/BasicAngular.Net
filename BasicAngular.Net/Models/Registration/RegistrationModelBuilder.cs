@@ -10,17 +10,7 @@ namespace BasicAngular.Net.Models.Registration
 {
     public class RegistrationModelBuilder
     {
-        public RegistrationModel BuildRegistrationModel()
-        {
-            var registrations = new RegistrationModel
-            {
-                Courses = GetSerializedCourses(),
-                Instructors = GetSerializedInstructors()
-            };
-            return registrations;
-        }
-
-        public string GetSerializedCourses()
+        public CourseModel[] GetCourses()
         {
             var courses = new[]
                 {
@@ -28,12 +18,11 @@ namespace BasicAngular.Net.Models.Registration
                     new CourseModel {Number = "DARK502", Name = "Defence Against the Dark Arts", Instructor = "Severus Snape"},
                     new CourseModel {Number = "TRAN201", Name = "Transfiguration", Instructor = "Minerva McGonagall"},
                 };
-            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-            var serializedCourses = JsonConvert.SerializeObject(courses, Formatting.None, settings);
-            return serializedCourses;
+            
+            return courses;
         }
 
-        public string GetSerializedInstructors()
+        public InstructorModel[] GetInstructors()
         {
             var instructors = new[]
                 {
@@ -41,9 +30,8 @@ namespace BasicAngular.Net.Models.Registration
                     new InstructorModel {Name = "Severus Snape", Email = "snape@hogwarts.com", RoomNumber = 105},
                     new InstructorModel {Name = "Minerva McGonagall", Email = "mcgonagall@hogwarts.com", RoomNumber = 102},
                 };
-            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-            var serializedInstructors = JsonConvert.SerializeObject(instructors, Formatting.None, settings);
-            return serializedInstructors;
+            
+            return instructors;
         }
     }
 }

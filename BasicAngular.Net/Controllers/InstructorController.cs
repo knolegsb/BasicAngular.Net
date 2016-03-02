@@ -7,14 +7,13 @@ using System.Web.Mvc;
 
 namespace BasicAngular.Net.Controllers
 {
-    public class RegistrationController : Controller
+    public class InstructorController : JsonController
     {
-       
+        private readonly RegistrationModelBuilder _registrationModelBuilder = new RegistrationModelBuilder();
 
-        // GET: Registration
         public ActionResult Index()
         {
-            return View();
+            return Json(_registrationModelBuilder.GetInstructors(), JsonRequestBehavior.AllowGet);
         }
     }
 }

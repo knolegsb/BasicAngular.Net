@@ -10,6 +10,10 @@ var registrationModule = angular.module("registrationModule", ['ngRoute'])
             templateUrl: '/templates/instructors.html',
             controller: 'InstructorsController'
         })
+        .when('/Registration/CreateAccount', {
+            templateUrl: '/templates/create-account.html',
+            controller: 'AccountsController'
+        })
         .otherwise({ redirectTo: '/' });
         
         //$locationProvider.html5Mode(true);
