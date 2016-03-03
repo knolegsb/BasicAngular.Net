@@ -13,15 +13,15 @@ namespace BasicAngular.Net
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Registration Courses SPA",
-                url: "Registration/Courses",
-                defaults: new { controller = "Registration", Action = "Index" });
+            //routes.MapRoute(
+            //    name: "Registration Courses SPA",
+            //    url: "Registration/Courses",
+            //    defaults: new { controller = "Registration", Action = "Index" });
 
-            routes.MapRoute(
-                name: "Registration Instructors SPA",
-                url: "Registration/Instructors",
-                defaults: new { controller = "Registration", Action = "Index" });
+            //routes.MapRoute(
+            //    name: "Registration Instructors SPA",
+            //    url: "Registration/Instructors",
+            //    defaults: new { controller = "Registration", Action = "Index" });
 
             routes.MapRoute(
                 name: "Default",

@@ -1,5 +1,5 @@
 ﻿
-var registrationModule = angular.module("registrationModule", ['ngRoute'])
+var registrationModule = angular.module("registrationModule", ['ngRoute', 'ngResource'])
     .config( function ($routeProvider) {
         $routeProvider
         .when('/Registration/Courses', {
