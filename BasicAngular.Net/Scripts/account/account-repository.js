@@ -9,7 +9,7 @@ registrationModule.factory('accountRepository', function ($resource) {
             //    .success(function () { deferred.resolve(); })
             //    .error(function () { deferred.reject(); });
             //return deferred.promise;
-            return $resource('/Accounts/Save').save(student);
+            return $resource('/api/Accounts').save(student);
         }
     };
 });

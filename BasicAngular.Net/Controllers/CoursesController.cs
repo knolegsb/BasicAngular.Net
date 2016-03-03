@@ -19,7 +19,7 @@ namespace BasicAngular.Net.Controllers
         {
             //return Json(_registrationModelBuilder.GetCourses(), JsonRequestBehavior.AllowGet);
             // Web Api already takes care of converting your objects from their native
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             return _registrationModelBuilder.GetCourses();
         }
     }
